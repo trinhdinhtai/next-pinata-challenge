@@ -3,17 +3,16 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 import "./globals.css"
 
 import type { Metadata } from "next"
-import { SessionProvider } from "next-auth/react"
 
-import { fontSans } from "@/lib/fonts"
+import { fontMono, fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import SiteFooter from "@/components/layout/site-footer"
 import SiteHeader from "@/components/layout/site-header"
 import { ThemeProvider } from "@/components/providers/theme-provider"
 
 export const metadata: Metadata = {
-  title: "Canvas",
-  description: "A starter for Next.js with Tailwind CSS and TypeScript",
+  title: "VangleTek Storage",
+  description: "A simple file storage service",
 }
 
 export default function RootLayout({
@@ -26,7 +25,8 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          fontSans.variable,
+          fontMono.variable
         )}
       >
         <ThemeProvider
